@@ -5,10 +5,9 @@
         </div>
         <div class="col d-none d-lg-block">
             <div class="float-end">
-                <a href="#" class="btn btn-outline-dark border-2 rounded-pill">Services</a>
-                <a href="#" class="btn btn-outline-dark border-2 rounded-pill">Partners</a>
-                <a href="#" class="btn btn-outline-dark border-2 rounded-pill">About Us</a>
-                <a href="#" class="btn btn-outline-success border-2 rounded-pill">Appointment</a>
+                <a href="{{ route('services') }}" class="btn btn-outline-dark border-2 rounded-pill">Services</a>
+                <a href="{{ route('partner') }}" class="btn btn-outline-dark border-2 rounded-pill">Partners</a>
+                <a href="{{ route('appointment') }}" class="btn btn-outline-success border-2 rounded-pill">Appointment</a>
             </div>
         </div>
         <div class="col d-block d-lg-none">
@@ -27,16 +26,13 @@
                                     <a class="btn btn-outline-dark border-2 rounded-pill" href="/">Home</a>
                                 </li>
                                 <li class="nav-item my-4">
-                                    <a href="#" class="btn btn-outline-dark border-2 rounded-pill">Services</a>
+                                    <a href="{{ route('services') }}" class="btn btn-outline-dark border-2 rounded-pill">Services</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="btn btn-outline-dark border-2 rounded-pill">Partners</a>
+                                    <a href="{{ route('partner') }}" class="btn btn-outline-dark border-2 rounded-pill">Partners</a>
                                 </li>
-                                <li class="nav-item my-4">
-                                    <a href="#" class="btn btn-outline-dark border-2 rounded-pill">About Us</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="btn btn-outline-success border-2 rounded-pill">Appointment</a>
+                                <li class="nav-item mt-4">
+                                    <a href="{{ route('appointment') }}" class="btn btn-outline-success border-2 rounded-pill">Appointment</a>
                                 </li>
                             </ul>
                         </div>
