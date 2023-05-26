@@ -13,6 +13,23 @@ class AdminAppointmentController extends Controller
         return view('admin.index', compact('appointments'));
     }
 
+    public function search(Request $request)
+    {
+        $licence = $request->input('licence');
+
+        // Perform the search query based on the licence plate
+        if ($licence) {
+            $appointments = Appointment::where('licence', $licence)->get();
+            $message = $appointments->isEmpty() ? 'No appointment found.' : 'Appointments found.';
+        } else {
+            $appointments = Appointment::all();
+            $message = null; // No search query, so no message is displayed
+        }
+
+        return view('admin.index', compact('appointments', 'message'));
+    }
+
+
     public function markAsDone(Appointment $appointment)
     {
         $appointment->status = 'done';

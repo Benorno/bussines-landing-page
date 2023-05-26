@@ -13,6 +13,18 @@ class ServicesController extends Controller
         return view('services.index', compact('services'));
     }
 
+    public function toAppointment()
+    {
+        $appointmentServices = Service::all();
+        return view('appointment.index', compact('appointmentServices'));
+    }
+
+    public function showAdmin()
+    {
+        $services = Service::all();
+        return view('admin.services.list', ['services' => $services]);
+    }
+
     public function create()
     {
         return view('admin.services.create');
@@ -29,7 +41,7 @@ class ServicesController extends Controller
 
         Service::create($request->all());
 
-        return redirect()->route('services')->with('success', 'Service created successfully.');
+        return redirect()->route('services.list')->with('success', 'Service created successfully.');
     }
 
     public function edit(Service $service)
@@ -48,13 +60,13 @@ class ServicesController extends Controller
 
         $service->update($request->all());
 
-        return redirect()->route('services')->with('success', 'Service updated successfully.');
+        return redirect()->route('services.list')->with('success', 'Service updated successfully.');
     }
 
     public function destroy(Service $service)
     {
         $service->delete();
 
-        return redirect()->route('services')->with('success', 'Service deleted successfully.');
+        return redirect()->route('services.list')->with('success', 'Service deleted successfully.');
     }
 }

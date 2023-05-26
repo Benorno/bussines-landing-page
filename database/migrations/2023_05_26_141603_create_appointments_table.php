@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('car_model');
             $table->string('licence');
             $table->dateTime('appointment_date');
-            $table->string('service');
             $table->string('status')->default('pending');
             $table->timestamps();
         });

@@ -19,6 +19,9 @@
             <div class="row">
                 <h2 class="text-center text-success">Your appointment was received.</h2>
             </div>
+            <div class="row" style="margin-top: 10svh">
+                <p class="text-secondary font-monospace">* Admin panel can be viewed <a href="{{ route('admin.index') }}" class="link-secondary">here.</a></p>
+            </div>
         </div>
     </main>
 

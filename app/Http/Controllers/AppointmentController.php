@@ -39,7 +39,7 @@ class AppointmentController extends Controller
 
             // You can perform additional actions here, such as sending confirmation emails, notifications, etc.
 
-            // Redirect the user to a thank you page or any other desired page
+            // Redirect the user to a thank you page
             return redirect()->route('thankyou');
          }
 }

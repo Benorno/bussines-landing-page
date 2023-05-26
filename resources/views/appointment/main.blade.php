@@ -80,9 +80,12 @@
                         <label for="service" class="form-label">Service</label>
                         <select class="form-select" id="service" name="service" required>
                             <option value="">Select a Service</option>
-                            <option value="Exterior_Wash_and_Dry">Exterior Wash and Dry - €25 to €40</option>
+                            @foreach ($appointmentServices as $service)
+                                <option value="{{ $service->name }}">{{ $service->name }} - €{{ $service->price }}</option>
+                            @endforeach
                         </select>
                     </div>
+
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

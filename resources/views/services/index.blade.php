@@ -7,7 +7,7 @@
         @include('header')
     </header>
 
-    <main>
+    <main style="margin-bottom: 40svh">
         @include('services.main')
     </main>
 
