@@ -33,7 +33,7 @@ class ServicesController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
+            'service_name' => 'required',
             'price' => 'required',
             'description' => 'required',
             'details' => 'required',
@@ -52,7 +52,7 @@ class ServicesController extends Controller
     public function update(Request $request, Service $service)
     {
         $request->validate([
-            'name' => 'required',
+            'service_name' => 'required',
             'price' => 'required',
             'description' => 'required',
             'details' => 'required',

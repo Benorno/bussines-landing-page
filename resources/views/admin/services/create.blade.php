@@ -13,8 +13,8 @@
             <form method="POST" action="{{ route('services.store') }}">
                 @csrf
                 <div class="mb-3">
-                    <label for="name" class="form-label">Service Name</label>
-                    <input type="text" class="form-control" id="name" name="name" required>
+                    <label for="service_name" class="form-label">Service Name</label>
+                    <input type="text" class="form-control" id="service_name" name="service_name" required>
                 </div>
                 <label for="price" class="form-label">Price Range</label>
                 <div class="input-group mb-3">

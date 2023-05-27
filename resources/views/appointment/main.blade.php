@@ -6,8 +6,8 @@
                 <h2><i class="bi bi-person-vcard"></i> Appointment Registration</h2>
                 <div class="row mt-5">
                     <div class="col-sm-3 mb-3">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
+                        <label for="full_name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="full_name" name="full_name" required>
                     </div>
                     <div class="col-sm-3 mb-3">
                         <label for="email" class="form-label">Email</label>
@@ -81,7 +81,7 @@
                         <select class="form-select" id="service" name="service" required>
                             <option value="">Select a Service</option>
                             @foreach ($appointmentServices as $service)
-                                <option value="{{ $service->name }}">{{ $service->name }} - €{{ $service->price }}</option>
+                                <option value="{{ $service->service_name }}">{{ $service->service_name }} - €{{ $service->price }}</option>
                             @endforeach
                         </select>
                     </div>

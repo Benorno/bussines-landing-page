@@ -36,7 +36,7 @@
                 <tbody>
                 @foreach ($services as $service)
                     <tr>
-                        <td>{{ $service->name }}</td>
+                        <td>{{ $service->service_name }}</td>
                         <td>€{{ $service->price }}</td>
                         <td>{{ $service->description }}</td>
                         <td>{{ $service->details }}</td>

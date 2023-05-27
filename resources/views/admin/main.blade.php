@@ -28,7 +28,7 @@
             <tbody>
             @foreach ($appointments as $appointment)
                 <tr>
-                    <td>{{ $appointment->name }}</td>
+                    <td>{{ $appointment->full_name }}</td>
                     <td><a href="mailto:{{ $appointment->email }}">{{ $appointment->email }}</a></td>
                     <td>{{ $appointment->phone }}</td>
                     <td>{{ $appointment->car_brand }}</td>

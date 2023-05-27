@@ -18,7 +18,7 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapse{{ $service->id }}" aria-expanded="false"
                                     aria-controls="collapse{{ $service->id }}">
-                                {{ $service->name }} - €{{ $service->price }}
+                                {{ $service->service_name }} - €{{ $service->price }}
                             </button>
                         </h2>
                         <div id="collapse{{ $service->id }}" class="accordion-collapse collapse" data-bs-parent="#accordionService">

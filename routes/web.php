@@ -45,8 +45,7 @@ Route::prefix('admin')->group(function () {
 });
 
 Route::get('/services', [ServicesController::class, 'index'])->name('services');
+
 Route::get('/appointment', [ServicesController::class, 'toAppointment'])->name('appointment');
-
 Route::post('/appointments', [AppointmentController::class, 'store'])->name('appointments.store');
-
 
