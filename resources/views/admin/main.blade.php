@@ -3,6 +3,7 @@
         <div class="col"></div>
         <div class="col-8">
             <form class="d-flex" role="search" action="{{ route('admin.appointments.search') }}" method="GET">
+                @csrf
                 <input class="form-control me-2" type="search" name="licence" placeholder="Search by licence plate" aria-label="Search">
                 <button class="btn btn-outline-success rounded-pill" type="submit"><i class="bi bi-search"></i></button>
             </form>
@@ -19,8 +20,7 @@
                 <th>Car Brand</th>
                 <th>Car Model</th>
                 <th>Licence</th>
-                <th>Service</th>
-                <th>Date</th>
+                <th>Reservation Date</th>
                 <th>Status</th>
                 <th>Action</th>
             </tr>
@@ -34,7 +34,6 @@
                     <td>{{ $appointment->car_brand }}</td>
                     <td>{{ $appointment->car_model }}</td>
                     <td>{{ $appointment->licence }}</td>
-                    <td>{{ $appointment->service }}</td>
                     <td>{{ $appointment->appointment_date }}</td>
                     @if($appointment->status === "pending")
                         <td class="text-warning" style="text-transform: uppercase"><b>{{ $appointment->status }}</b></td>

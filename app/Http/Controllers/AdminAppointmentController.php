@@ -9,7 +9,7 @@ class AdminAppointmentController extends Controller
 {
     public function index()
     {
-        $appointments = Appointment::all();
+        $appointments = Appointment::orderBy('created_at', 'desc')->get();
         return view('admin.index', compact('appointments'));
     }
 

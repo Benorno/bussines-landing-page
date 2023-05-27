@@ -22,7 +22,7 @@ class ServicesController extends Controller
     public function showAdmin()
     {
         $services = Service::all();
-        return view('admin.services.list', ['services' => $services]);
+        return view('admin.services.list', compact('services'));
     }
 
     public function create()

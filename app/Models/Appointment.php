@@ -9,20 +9,7 @@ class Appointment extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'full_name',
-        'email',
-        'phone',
-        'car_brand',
-        'car_model',
-        'licence',
-        'appointment_date',
-        'service',
-        'status',
-    ];
+    protected $fillable = ['full_name', 'email', 'phone', 'car_brand', 'car_model', 'licence', 'service_name', 'appointment_date'];
 
-    public static function create(array $array)
-    {
-    }
 
 }

@@ -19,7 +19,10 @@
                     </div>
                     <div class="col-sm-3 mb-3">
                         <label for="appointment_date" class="form-label">Available Date</label>
-                        <input type="datetime-local" class="form-control" id="appointment_date" name="appointment_date" required>
+                        <input type="datetime-local" id="appointment_date" name="appointment_date" class="form-control" required min="{{ now()->format('Y-m-d\TH:i') }}">
+                        @error('appointment_date')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
                     </div>
                 </div>
                 <div class="row">
