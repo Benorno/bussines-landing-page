@@ -19,8 +19,6 @@
     <main>
         <div class="container-fluid p-5">
             <h1><i class="bi bi-card-list"></i> Services</h1>
-            <p class="font-monospace text-warning">*plz don't delete and leave it deleted. If you are seeing how the functionality works,
-                remember to fill it back again. thx :)</p>
             <a href="{{ route('services.create') }}" class="btn btn-outline-primary border-2 rounded-pill mb-3"><i class="bi bi-plus-circle"></i>
                 Create Service</a>
             <table class="table table-striped">
